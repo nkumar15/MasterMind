@@ -10,25 +10,44 @@ using namespace std;
 class GameBoard{
 
 private:
-unsigned int num_peg_rows;
-unsigned int pegs_in_row;
-GameState game_state;
+    unsigned int num_rows;
+    unsigned int pegs_in_row;
+    vector<PegRow> code_rows;
+    vector<PegRow> feedback_rows;
+    PegRow shield_pegs_row;
+    vector<string> colornames;
 
-vector<PegRow> code_key_peg_rows;
-PegRow shield_pegs_row;
+    unsigned int current_attempt_no;
 
-void init();
-PegColor get_random_color();
+    void init();
+    PegColor get_random_color();
+    vector<Peg> get_code_peg_row(unsigned int row_idx);
+    vector<Peg> get_feedback_peg_row(unsigned int row_idx);
+
+    bool set_shield_peg(unsigned int peg_idx, Peg &peg);
+    Peg& get_shield_peg(unsigned int peg_idx);
+
+    bool check_color_exist_in_shield(PegColor color);
 
 public:
-    GameBoard(unsigned int num_rows, unsigned int num_pegs);
-    ~GameBoard();
+    GameBoard(unsigned int _num_rows, unsigned int _num_pegs);
+    ~GameBoard(){}
 
     void reset();
 
-    void create_shield_code();
     bool set_code_peg(unsigned int row_idx, unsigned int peg_idx, Peg &peg);
+    Peg& get_code_peg(unsigned int row_idx, unsigned int peg_idx);
 
+
+    bool set_feedback_peg(unsigned int row_idx, unsigned int peg_idx, Peg &peg);
+    Peg& get_feedback_peg(unsigned int row_idx, unsigned int peg_idx);
+
+
+    void create_shield_code();
+    void display_shield_code();
+    bool verify_guess();
 };
+
+
 
 #endif //

@@ -1,22 +1,24 @@
 # depslib dependency file v1.0
-1385316878 source:f:\programs\mastermind\mastermind\main.cpp
+1463826490 source:f:\programs\mastermind\mastermind\main.cpp
 	<iostream>
+	"include/board.h"
 
-1463804986 source:f:\programs\mastermind\mastermind\src\peg.cpp
+1463822315 source:f:\programs\mastermind\mastermind\src\peg.cpp
 	"../include/peg.h"
 
-1463807224 f:\programs\mastermind\mastermind\include\peg.h
+1463818888 f:\programs\mastermind\mastermind\include\peg.h
 	"types.h"
 	<vector>
+	<iostream>
 
-1463802389 f:\programs\mastermind\mastermind\include\types.h
+1463825334 f:\programs\mastermind\mastermind\include\types.h
 
-1463807747 source:f:\programs\mastermind\mastermind\src\board.cpp
+1463826598 source:f:\programs\mastermind\mastermind\src\board.cpp
 	"../include/board.h"
 	<stdlib.h>
 	<time.h>
 
-1463807724 f:\programs\mastermind\mastermind\include\board.h
+1463825749 f:\programs\mastermind\mastermind\include\board.h
 	"peg.h"
 	<vector>
 	<iostream>

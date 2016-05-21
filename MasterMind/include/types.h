@@ -1,6 +1,7 @@
 #ifndef TYPES_H_INCLUDED
 #define TYPES_H_INCLUDED
 
+
 enum class PegColor{
     RED = 0,
 	YELLOW,
@@ -16,7 +17,7 @@ enum class PegColor{
 
 enum class PegType{
 	CODE = 0,
-	KEY,
+	FEEDBACK,
 };
 
 enum class GameState{

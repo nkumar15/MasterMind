@@ -20,33 +20,27 @@ PegColor Peg :: get_color(){
 PegRow :: PegRow(unsigned int num_pegs){
 
     this->num_pegs = num_pegs;
-    code_pegs_row.reserve(this->num_pegs);
-    key_pegs_row.reserve(this->num_pegs);
+    pegs_row.reserve(this->num_pegs);
 
     for(unsigned int idx = 0; idx < num_pegs; idx++){
-        code_pegs_row.push_back(Peg(PegType::CODE, PegColor::EMPTY));
-        key_pegs_row.push_back(Peg(PegType::KEY, PegColor::BLACK));
+        pegs_row.push_back(Peg(PegType::CODE, PegColor::EMPTY));
     }
-
 }
 
 /* set code peg in a code peg row */
-bool PegRow :: set_code_peg(unsigned int idx, Peg &peg){
+bool PegRow :: set_peg(unsigned int idx, Peg &peg){
 
-    if ( idx >= code_pegs_row.size())
+    if ( idx >= pegs_row.size())
         return false;
 
-    code_pegs_row[idx] = peg;
+    pegs_row[idx] = peg;
     return true;
 }
 
-/* set key in a key peg row */
-bool PegRow :: set_key_peg(unsigned int idx, Peg &peg){
-
-    if ( idx >= key_pegs_row.size())
-        return false;
-
-    key_pegs_row[idx] = peg;
-    return true;
+Peg& PegRow :: get_peg(unsigned int idx){
+    return pegs_row[idx];
 }
 
+vector<Peg> PegRow :: get_pegs_row(){
+    return pegs_row;
+}

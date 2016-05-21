@@ -3,10 +3,11 @@
 
 #include "types.h"
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
-class Peg{
+class Peg {
 
 private:
     PegColor color;
@@ -21,18 +22,18 @@ public:
     PegType get_type();
 };
 
-class PegRow{
+class PegRow {
 
 private:
     unsigned int num_pegs;
-    vector<Peg> code_pegs_row;
-    vector<Peg> key_pegs_row;
+    vector<Peg> pegs_row;
 
 public:
+    PegRow(){}
     PegRow(unsigned int num_pegs);
-    bool set_code_peg(unsigned int idx, Peg &peg);
-    bool set_key_peg(unsigned int idx, Peg &peg);
-
+    bool set_peg(unsigned int idx, Peg &peg);
+    Peg& get_peg(unsigned int idx);
+    vector<Peg> get_pegs_row();
 };
 
 #endif // PEG_H_INCLUDED
