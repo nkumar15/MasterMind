@@ -33,7 +33,7 @@ public:
     PegRow(unsigned int num_pegs);
     bool set_peg(unsigned int idx, Peg &peg);
     Peg& get_peg(unsigned int idx);
-    vector<Peg> get_pegs_row();
+    vector<Peg>& get_pegs_row();
 };
 
 #endif // PEG_H_INCLUDED

@@ -41,6 +41,6 @@ Peg& PegRow :: get_peg(unsigned int idx){
     return pegs_row[idx];
 }
 
-vector<Peg> PegRow :: get_pegs_row(){
+vector<Peg>& PegRow :: get_pegs_row(){
     return pegs_row;
 }

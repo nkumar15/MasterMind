@@ -16,13 +16,12 @@ private:
     vector<PegRow> feedback_rows;
     PegRow shield_pegs_row;
     vector<string> colornames;
-
-    unsigned int current_attempt_no;
+    vector<PegColor> color_codes;
 
     void init();
     PegColor get_random_color();
-    vector<Peg> get_code_peg_row(unsigned int row_idx);
-    vector<Peg> get_feedback_peg_row(unsigned int row_idx);
+    vector<Peg>& get_code_peg_row(unsigned int row_idx);
+    vector<Peg>& get_feedback_peg_row(unsigned int row_idx);
 
     bool set_shield_peg(unsigned int peg_idx, Peg &peg);
     Peg& get_shield_peg(unsigned int peg_idx);
@@ -34,6 +33,7 @@ public:
     ~GameBoard(){}
 
     void reset();
+    PegColor get_color(unsigned int code);
 
     bool set_code_peg(unsigned int row_idx, unsigned int peg_idx, Peg &peg);
     Peg& get_code_peg(unsigned int row_idx, unsigned int peg_idx);
@@ -45,7 +45,9 @@ public:
 
     void create_shield_code();
     void display_shield_code();
-    bool verify_guess();
+    void display_code_pegs(unsigned int idx);
+    void display_feeback_code(unsigned int idx);
+    bool verify_guess(int attempt);
 };
 
 
