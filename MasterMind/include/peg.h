@@ -17,6 +17,8 @@ public:
     ~Peg(){}
     void set_color(PegColor color);
     PegColor get_color();
+    void set_type(PegType type);
+    PegType get_type();
 };
 
 class PegRow{
@@ -28,6 +30,9 @@ private:
 
 public:
     PegRow(unsigned int num_pegs);
+    bool set_code_peg(unsigned int idx, Peg &peg);
+    bool set_key_peg(unsigned int idx, Peg &peg);
+
 };
 
 #endif // PEG_H_INCLUDED

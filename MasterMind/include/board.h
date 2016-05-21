@@ -3,6 +3,7 @@
 
 #include "peg.h"
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -14,13 +15,20 @@ unsigned int pegs_in_row;
 GameState game_state;
 
 vector<PegRow> code_key_peg_rows;
-vector<PegRow> shield_peg_row;
+PegRow shield_pegs_row;
 
 void init();
+PegColor get_random_color();
 
 public:
     GameBoard(unsigned int num_rows, unsigned int num_pegs);
+    ~GameBoard();
+
     void reset();
+
+    void create_shield_code();
+    bool set_code_peg(unsigned int row_idx, unsigned int peg_idx, Peg &peg);
+
 };
 
 #endif //

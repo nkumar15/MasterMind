@@ -30,4 +30,23 @@ PegRow :: PegRow(unsigned int num_pegs){
 
 }
 
+/* set code peg in a code peg row */
+bool PegRow :: set_code_peg(unsigned int idx, Peg &peg){
+
+    if ( idx >= code_pegs_row.size())
+        return false;
+
+    code_pegs_row[idx] = peg;
+    return true;
+}
+
+/* set key in a key peg row */
+bool PegRow :: set_key_peg(unsigned int idx, Peg &peg){
+
+    if ( idx >= key_pegs_row.size())
+        return false;
+
+    key_pegs_row[idx] = peg;
+    return true;
+}
 
