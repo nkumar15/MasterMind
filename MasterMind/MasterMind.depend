@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1385316878 source:f:\programs\mastermind\mastermind\main.cpp
+	<iostream>
+
+1463801956 source:f:\programs\mastermind\mastermind\src\peg.cpp
+	"../include/peg.h"
+
+1463801850 f:\programs\mastermind\mastermind\include\peg.h
+	"types.h"
+	<vector>
+
+1463802389 f:\programs\mastermind\mastermind\include\types.h
+
+1463802990 source:f:\programs\mastermind\mastermind\src\board.cpp
+	"../include/board.h"
+
+1463802436 f:\programs\mastermind\mastermind\include\board.h
+	"peg.h"
+	<vector>
+
