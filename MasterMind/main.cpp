@@ -29,7 +29,7 @@ int main()
     int input_color = 0;
     PegColor color = PegColor::EMPTY;
     int attempts = 0;
-
+peg_count = 0;
     while ( attempts < NUM_ROWS )
     {
         peg_count = 0;

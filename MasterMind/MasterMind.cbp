@@ -34,10 +34,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="board.h" />
+		<Unit filename="include/board.h" />
 		<Unit filename="include/peg.h" />
 		<Unit filename="include/types.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/board.cpp" />
 		<Unit filename="src/peg.cpp" />
 		<Extensions>
 			<code_completion />

@@ -1,0 +1,41 @@
+Components
+---------
+Board contains R number of Pegrows(code pegs and key pegs)
+Code Pegs of N colors
+Key Pegs white and black color.
+Peg row contains X pegs  X < N
+Each Peg row is associated with its X key pegs
+Number of guess attemts M
+
+CodeMaker
+----------
+Codemaker creates the code.
+
+CodeBreaker
+----------
+Code breaker tries to guess the correct code created by code maker in at most M attempts.
+
+
+Game flow
+--------------
+Boards gets ready
+Random hidden code of colors are created by CodeMaker of X pegs
+Code breaker makes guess of X pegs in a order
+if guess correct
+   code breaker won
+
+if guess incorrect and but some colors are present
+   check each color which are correct
+      if they are in correct position
+           make white in X key pegs
+      else
+           let them white X key pegs
+
+
+
+
+
+
+
+
+
