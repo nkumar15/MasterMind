@@ -1,7 +1,7 @@
 #ifndef TYPES_H_INCLUDED
 #define TYPES_H_INCLUDED
 
-
+/* Types of color present in system */
 enum class PegColor : int
 {
     RED = 0,
@@ -14,17 +14,11 @@ enum class PegColor : int
 
 };
 
+/* Type of peg */
 enum class PegType
 {
     CODE = 0,
     FEEDBACK,
-};
-
-enum class GameState
-{
-    READY=0,
-    PLAYING,
-    STOPPED
 };
 
 #endif // TYPES_H_INCLUDED

@@ -35,22 +35,22 @@ PegRow :: PegRow(unsigned int num_pegs)
 /* set code peg in a code peg row */
 bool PegRow :: set_peg(unsigned int idx, Peg &peg)
 {
-
     if ( idx >= pegs_row.size())
     {
         return false;
     }
 
-
     pegs_row[idx] = peg;
     return true;
 }
 
+/* Get the peg at index in a row */
 Peg& PegRow :: get_peg(unsigned int idx)
 {
     return pegs_row[idx];
 }
 
+/* Get the entire pegs row */
 vector<Peg>& PegRow :: get_pegs_row()
 {
     return pegs_row;

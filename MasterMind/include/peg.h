@@ -7,6 +7,7 @@
 
 using namespace std;
 
+/* Peg class to denote a single peg */
 class Peg
 {
 
@@ -21,8 +22,10 @@ public:
     PegColor get_color();
     void set_type(PegType type);
     PegType get_type();
+
 };
 
+/* Peg row */
 class PegRow
 {
 
