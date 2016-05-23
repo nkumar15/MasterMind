@@ -7,7 +7,8 @@
 
 using namespace std;
 
-class Peg {
+class Peg
+{
 
 private:
     PegColor color;
@@ -15,21 +16,22 @@ private:
 
 public:
     Peg(PegType type, PegColor color);
-    ~Peg(){}
+    ~Peg() {}
     void set_color(PegColor color);
     PegColor get_color();
     void set_type(PegType type);
     PegType get_type();
 };
 
-class PegRow {
+class PegRow
+{
 
 private:
     unsigned int num_pegs;
     vector<Peg> pegs_row;
 
 public:
-    PegRow(){}
+    PegRow() {}
     PegRow(unsigned int num_pegs);
     bool set_peg(unsigned int idx, Peg &peg);
     Peg& get_peg(unsigned int idx);

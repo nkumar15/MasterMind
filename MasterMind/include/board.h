@@ -3,11 +3,14 @@
 
 #include "peg.h"
 #include <vector>
+#include <unordered_map>
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
-class GameBoard{
+class GameBoard
+{
 
 private:
     unsigned int num_rows;
@@ -15,8 +18,8 @@ private:
     vector<PegRow> code_rows;
     vector<PegRow> feedback_rows;
     PegRow shield_pegs_row;
-    vector<string> colornames;
-    vector<PegColor> color_codes;
+    unordered_map<int, string> colornames;
+
 
     void init();
     PegColor get_random_color();
@@ -30,10 +33,12 @@ private:
 
 public:
     GameBoard(unsigned int _num_rows, unsigned int _num_pegs);
-    ~GameBoard(){}
+    ~GameBoard() {}
 
     void reset();
-    PegColor get_color(unsigned int code);
+
+    string get_color_name(PegColor clr);
+    PegColor get_color_code(int code);
 
     bool set_code_peg(unsigned int row_idx, unsigned int peg_idx, Peg &peg);
     Peg& get_code_peg(unsigned int row_idx, unsigned int peg_idx);
@@ -48,6 +53,7 @@ public:
     void display_code_pegs(unsigned int idx);
     void display_feeback_code(unsigned int idx);
     bool verify_guess(int attempt);
+
 };
 
 
