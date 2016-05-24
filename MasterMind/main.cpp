@@ -48,7 +48,7 @@ int main()
     /* Run loop player exhaust its number of attempts */
     do
     {
-        system("cls");
+        std::system("clear");
         print_color_banner(board_ptr);
         print_info_banner();
         //board_ptr->display_shield_code();
